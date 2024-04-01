@@ -1,0 +1,10 @@
+h1 {
+    text-align: center;
+  }
+  p{
+    margin: 10px 50px 200px 50px;
+  }
+  #present-alert{
+    width: 16%;
+    margin: 0px 42% 0% 42%;
+  }
