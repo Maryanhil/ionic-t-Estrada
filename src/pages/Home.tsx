@@ -13,8 +13,11 @@ const Home: React.FC = () => {
       <IonContent className="ion-padding">
         <div className="ion-text-center">
           <h2>Welcome to My App</h2>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum nisi quidem ratione maxime facilis placeat repellat sapiente ipsa, quo, blanditiis molestiae cum incidunt? Soluta voluptas ipsum, quaerat dolores natus neque asperiores commodi est quisquam illo fugit similique ab molestiae! Consectetur tempora illo provident corrupti reprehenderit ratione earum animi voluptatum dolorem asperiores eum nostrum harum veniam, doloribus, ad, cum rem vitae hic minima incidunt nihil. Consectetur nesciunt repellat veritatis natus facere, reprehenderit delectus ipsa voluptatem qui fuga suscipit nostrum quae. Debitis.</p>
-          <p>Start exploring now!</p>
+          <p>Greetings and welcome to My App! We're thrilled to have you join our community of users who are embarking on an exciting journey of my app offers.
+At My App, we're dedicated to providing an exceptional experience tailored just for you. Whether you're here to mention primary purpose or benefit of the app, another key feature or benefit, or another aspect of the app, we're here to guide you every step of the way.
+Our team has poured their passion and expertise into crafting My App Name to be not just another app, but a trusted companion in your daily life. We're committed to making your experience seamless and enjoyable.
+So, what are you waiting for? Dive in, explore, and discover all that My App has to offer. Whether you're a seasoned pro or a newcomer, there's something here for everyone.
+</p>
         </div>
         <IonButton id="present-alert">explore now!</IonButton>
       <IonAlert
