@@ -27,44 +27,7 @@ Our team has poured their passion and expertise into crafting My Ionic App  to b
 So, what are you waiting for? Dive in, explore, and discover all that My Ionic App has to offer. Whether you're a seasoned pro or a newcomer, there's something here for everyone.
 </p>
         </div>
-        <IonCard>
-      <IonCardHeader>
-        <IonCardTitle>HOME</IonCardTitle>
-        <IonCardSubtitle></IonCardSubtitle>
-      </IonCardHeader>
-      <IonCardContent>
-        <IonList>
-          <IonItem>
-            <IonThumbnail slot="start">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </IonThumbnail>
-            <IonLabel>Click Counter</IonLabel>
-          </IonItem>
-
-          <IonItem>
-            <IonThumbnail slot="start">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </IonThumbnail>
-            <IonLabel>Calculator</IonLabel>
-          </IonItem>
-
-          <IonItem>
-            <IonThumbnail slot="start">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </IonThumbnail>
-            <IonLabel>Item</IonLabel>
-          </IonItem>
-
-          <IonItem lines="none">
-            <IonThumbnail slot="start">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </IonThumbnail>
-            <IonLabel>Item</IonLabel>
-          </IonItem>
-        </IonList>
-      </IonCardContent>
-    </IonCard>
-
+        
       </IonContent>
     </IonPage>
   );
