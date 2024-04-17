@@ -15,7 +15,7 @@ const Profile: React.FC = () => {
         <IonList lines="full">
           <IonItem>
             <IonAvatar slot="start">
-              <IonImg src="https://scontent.fmnl7-1.fna.fbcdn.net/v/t39.30808-6/327207988_1583626385448198_3267979529570872045_n.jpg?stp=dst-jpg_s552x414&_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG-tbZcWIh3g1leCClrA3-E7RLfLIQ1xnntEt8shDXGeVkhViC4JjvRN6wWpqqTPLuVNHLJpOM-NFg85bzF8IDv&_nc_ohc=W9HtyQxCQSMAX-I-LJZ&_nc_ht=scontent.fmnl7-1.fna&oh=00_AfDX2PN5VNVQCGCy_vuE0N0uTz1X-GhYf30aw9dRiPKwag&oe=6609536F" />
+              <IonImg src="https://scontent.fcgy2-2.fna.fbcdn.net/v/t39.30808-6/327207988_1583626385448198_3267979529570872045_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG-tbZcWIh3g1leCClrA3-E7RLfLIQ1xnntEt8shDXGeVkhViC4JjvRN6wWpqqTPLuVNHLJpOM-NFg85bzF8IDv&_nc_ohc=-Fonu0xcA_AAb47q5C0&_nc_ht=scontent.fcgy2-2.fna&oh=00_AfDnidvw5FtfBC6dxXP3e3MSCMioctzQW2ncLmrl8o9LcA&oe=66261C2F" />
             </IonAvatar>
             <IonLabel>
               <h2>Marianne Gil Estrada</h2>
