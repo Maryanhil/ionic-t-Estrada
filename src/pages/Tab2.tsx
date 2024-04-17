@@ -12,18 +12,7 @@ const Tab2: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Click Counter</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen className="counter-content">
-        <div className="counter-container">
-          <h1>Click Counter</h1>
-          <p>Total Clicks: {count}</p>
-          <IonButton onClick={incrementCounter}>Click me!</IonButton>
-        </div>
-      </IonContent>
+      
     </IonPage>
   );
 };
