@@ -8,6 +8,7 @@ import {IonCard,
   IonLabel,
   IonList,
   IonThumbnail, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonAlert } from '@ionic/react';
+  import { IonRouterLink } from '@ionic/react';
 import './Home.css';
 
 const Home: React.FC = () => {
@@ -26,41 +27,38 @@ const Home: React.FC = () => {
         </div>
         <IonCard>
       <IonCardHeader>
-        <IonCardTitle>HOME</IonCardTitle>
-        <IonCardSubtitle></IonCardSubtitle>
       </IonCardHeader>
       <IonCardContent>
         <IonList>
-          <IonItem>
-            <IonThumbnail slot="start">
-              <img alt="Silhouette of mountains" src="https://img.freepik.com/free-vector/illustration-touch-screen-hand-gesture_53876-5607.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1713225600&semt=ais" />
-            </IonThumbnail>
-            <IonLabel>Click Counter</IonLabel>
-          </IonItem>
-
-
-          <IonItem>
-            <IonThumbnail slot="start">
-              <img alt="Silhouette of mountains" src="https://i.pinimg.com/564x/e8/be/5e/e8be5e46a90ac4a8dff3a1ecc9bbf16f.jpg" />
-            </IonThumbnail>
-            <IonLabel>Calculator</IonLabel>
-          </IonItem>
-
-
-          <IonItem>
-            <IonThumbnail slot="start">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </IonThumbnail>
-            <IonLabel>Blank</IonLabel>
-          </IonItem>
-
-
-          <IonItem lines="none">
-            <IonThumbnail slot="start">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </IonThumbnail>
-            <IonLabel>Blank</IonLabel>
-          </IonItem>
+        <IonRouterLink href="/Click_counter">
+              <IonItem>
+                  <IonThumbnail slot="start">
+                    <img alt="Silhouette of mountains" src="https://img.freepik.com/free-vector/illustration-touch-screen-hand-gesture_53876-5607.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1713225600&semt=ais" />
+                  </IonThumbnail>
+                  <IonLabel>Click Counter</IonLabel>
+              </IonItem>
+                </IonRouterLink>
+              
+              <IonRouterLink href="/Calculator">
+              <IonItem>
+                <IonThumbnail slot="start">
+                    <img id="img" alt="Silhouette of mountains" src="https://i.pinimg.com/564x/e8/be/5e/e8be5e46a90ac4a8dff3a1ecc9bbf16f.jpg" />
+                  </IonThumbnail>
+                  <IonLabel>Calculator</IonLabel>
+              </IonItem>
+                </IonRouterLink>
+              <IonItem>
+                <IonThumbnail slot="start">
+                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                </IonThumbnail>
+                <IonLabel>Blank</IonLabel>
+              </IonItem>
+              <IonItem lines="none">
+                <IonThumbnail slot="start">
+                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                </IonThumbnail>
+                <IonLabel>Blank</IonLabel>
+              </IonItem>
         </IonList>
       </IonCardContent>
     </IonCard>
