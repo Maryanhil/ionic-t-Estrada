@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import { home, person, calculator, statsChart } from 'ionicons/icons'; // Import necessary icons
+import { home, informationCircle, closeCircle, } from 'ionicons/icons'; // Import necessary icons
 import {
   IonApp,
   IonIcon,
@@ -55,27 +55,24 @@ const App: React.FC = () => (
           <Route exact path="/Calculator">
             <Tab3 />
           </Route>
-          
+          <Route exact path="null">
+          </Route>
           <Route exact path="/">
             <Redirect to="/Home" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="Home" href="/Home">
+        <IonTabButton tab="Home" href="/Home">
             <IonIcon aria-hidden="true" icon={home} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
+          <IonTabButton>
+            <IonIcon aria-hidden="true" icon={closeCircle} /> 
+            <IonLabel>Null</IonLabel>
+          </IonTabButton>
           <IonTabButton tab="Profile" href="/Profile">
-            <IonIcon aria-hidden="true" icon={person} />
+            <IonIcon aria-hidden="true" icon={informationCircle} />
             <IonLabel>Profile</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="Click_Counter" href="/Click_Counter">
-            <IonIcon aria-hidden="true" icon={statsChart} /> 
-            <IonLabel>Click Counter</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="Calculator" href="/Calculator">
-            <IonIcon aria-hidden="true" icon={calculator} /> 
-            <IonLabel>Calculator</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
