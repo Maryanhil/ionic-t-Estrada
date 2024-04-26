@@ -16,6 +16,7 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Tab2 from './pages/Click_Counter';
 import Tab3 from './pages/Calculator';
+import ToDoList from './pages/ToDoList';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -55,7 +56,8 @@ const App: React.FC = () => (
           <Route exact path="/Calculator">
             <Tab3 />
           </Route>
-          <Route exact path="null">
+          <Route exact path="/ToDoList">
+            <ToDoList />
           </Route>
           <Route exact path="/">
             <Redirect to="/Home" />

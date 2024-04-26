@@ -1,71 +1,119 @@
-import React from 'react';
-import {IonCard,
+import React, { useState } from 'react';
+import {
+  IonBackButton,
+  IonButton,
+  IonButtons,
+  IonCard,
   IonCardContent,
   IonCardHeader,
   IonCardSubtitle,
   IonCardTitle,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonHeader,
+  IonIcon,
+  IonInput,
   IonItem,
   IonLabel,
   IonList,
-  IonThumbnail, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonAlert } from '@ionic/react';
-  import { IonRouterLink } from '@ionic/react';
+  IonPage,
+  IonRow,
+  IonTitle,
+  IonToolbar,
+  IonItemDivider,
+  IonSearchbar
+} from '@ionic/react';
+
+//Custom CSS
 import './Home.css';
 
-const Home: React.FC = () => {
-  return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Home</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent className="ion-padding">
-        <div className="ion-text-center">
-          <h2>Welcome to My Ionic App</h2>
-          <p>Greetings and welcome to My Ionic App! We're thrilled to have you join our community of users who are embarking on an exciting journey of my app offers. At My Ionic App, we're dedicated to providing an exceptional experience tailored just for you. Whether you're here to mention primary purpose or benefit of the app, another key feature or benefit, or another aspect of the app, we're here to guide you every step of the way. Our team has poured their passion and expertise into crafting My Ionic App  to be not just another app, but a trusted companion in your daily life. We're committed to making your experience seamless and enjoyable. So, what are you waiting for? Dive in, explore, and discover all that My Ionic App has to offer. Whether you're a seasoned pro or a newcomer, there's something here for everyone.
-</p>
-        </div>
-        <IonCard>
-      <IonCardHeader>
-      </IonCardHeader>
-      <IonCardContent>
-        <IonList>
-        <IonRouterLink href="/Click_counter">
-              <IonItem>
-                  <IonThumbnail slot="start">
-                    <img alt="Silhouette of mountains" src="https://img.freepik.com/free-vector/illustration-touch-screen-hand-gesture_53876-5607.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1713225600&semt=ais" />
-                  </IonThumbnail>
-                  <IonLabel>Click Counter</IonLabel>
-              </IonItem>
-                </IonRouterLink>
-              
-              <IonRouterLink href="/Calculator">
-              <IonItem>
-                <IonThumbnail slot="start">
-                    <img id="img" alt="Silhouette of mountains" src="https://i.pinimg.com/564x/e8/be/5e/e8be5e46a90ac4a8dff3a1ecc9bbf16f.jpg" />
-                  </IonThumbnail>
-                  <IonLabel>Calculator</IonLabel>
-              </IonItem>
-                </IonRouterLink>
-              <IonItem>
-                <IonThumbnail slot="start">
-                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-                </IonThumbnail>
-                <IonLabel>Blank</IonLabel>
-              </IonItem>
-              <IonItem lines="none">
-                <IonThumbnail slot="start">
-                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-                </IonThumbnail>
-                <IonLabel>Blank</IonLabel>
-              </IonItem>
-        </IonList>
-      </IonCardContent>
-    </IonCard>
+//Ionic Icons
+import { speedometerOutline,calculator,pencil, chatbubble} from 'ionicons/icons';
 
-      </IonContent>
-    </IonPage>
-  );
-};
+//Additional Routes
+import Click_Counter from './Click_Counter';
 
-export default Home;
+const cardData = [
+  {
+    title: 'Click Counter',
+    icon: speedometerOutline,
+    subtitle: 'Applet #1',
+    link: '/Click_Counter'
+  },
+  {
+    title: 'Calculator',
+    icon: calculator,
+    subtitle: 'Applet #2',
+    link: '/calculator'
+  },
+  {
+    title: 'To Do List',
+    icon: pencil,
+    subtitle: 'Applet #3',
+    link: '/todolist'
+  },
+  {
+    title: 'Quotes Generator',
+    icon: chatbubble,
+    subtitle: 'Applet #4',
+    link: '/quotesgenerator'
+  }
+  
+];
+
+  const Home: React.FC = () => {
+
+    {/*Dynamic Search*/}
+    const [searchTerm, setSearchTerm] = useState<string>('');
+
+    return (
+      <IonPage>
+        <IonHeader>
+          <IonToolbar>
+            <IonTitle>Home</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+        <IonContent fullscreen>
+          <IonHeader collapse="condense">
+            <IonToolbar>
+              <IonTitle size="large">Home</IonTitle>
+            </IonToolbar>
+          </IonHeader>
+        {/*Dynamic Search*/}
+        <>
+          <IonSearchbar 
+            value={searchTerm} 
+            onIonInput={(e) => setSearchTerm(e.target.value ?? '')} 
+          />
+          
+          {cardData
+            .filter((card) => card.title.toLowerCase().includes(searchTerm.toLowerCase()))
+            .map((card, index) => (
+              <IonCard key={index} href={card.link}>
+                <IonCardHeader>
+                  <IonCardTitle>
+                    <IonGrid>
+                      <IonRow>
+                        <IonCol push=".75">
+                          <IonIcon className="home-card-icon" icon={card.icon} color="primary" />
+                        </IonCol>
+                        <IonCol pull='3'>
+                          <div className="home-card-title">{card.title}</div>
+                          <IonCardSubtitle>{card.subtitle}</IonCardSubtitle>
+                        </IonCol>
+                      </IonRow>
+                    </IonGrid>
+                  </IonCardTitle>
+                </IonCardHeader>
+              </IonCard>
+          ))}
+        </>
+          </IonContent>
+        </IonPage>
+    );
+  };
+  
+  //
+  export default Home;
+  
