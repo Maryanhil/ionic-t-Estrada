@@ -18,6 +18,7 @@ import Tab2 from './pages/Click_Counter';
 import Tab3 from './pages/Calculator';
 import ToDoList from './pages/ToDoList';
 import QuoteGenerator from './pages/quotegenerator';
+import Notes from './pages/notes';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -62,6 +63,9 @@ const App: React.FC = () => (
           </Route>
           <Route path="/quotegenerator">
             <QuoteGenerator />
+          </Route>
+          <Route path="/notes">
+            <Notes />
           </Route>
 
           <Route exact path="/">
