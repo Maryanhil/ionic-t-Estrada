@@ -57,7 +57,7 @@ const cardData = [
     title: 'Quotes Generator',
     icon: chatbubble,
     subtitle: 'Applet #4',
-    link: '/quotesgenerator'
+    link: '/quotegenerator'
   }
   
 ];
@@ -82,10 +82,11 @@ const cardData = [
           </IonHeader>
         {/*Dynamic Search*/}
         <>
-          <IonSearchbar 
-            value={searchTerm} 
-            onIonInput={(e) => setSearchTerm(e.target.value ?? '')} 
-          />
+        <IonSearchbar
+  value={searchTerm}
+  onIonInput={(e) => setSearchTerm((e.target.value || '').toLowerCase())}
+  autocapitalize="off" // Add autocapitalize property
+/>
           
           {cardData
             .filter((card) => card.title.toLowerCase().includes(searchTerm.toLowerCase()))
