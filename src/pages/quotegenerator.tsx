@@ -75,7 +75,7 @@ const QuoteGenerator: React.FC = () => {
             <IonIcon id="arrow" aria-hidden="true" icon={arrowBackCircle} />
                 </IonRouterLink>
         <div className="rizz">
-          <img alt="Silhouette of mountains" src="https://media.tenor.com/yEG23sxXIVQAAAAM/shrek-shrek-meme.gif" />
+          <img alt="Silhouette of mountains" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd8fFC-L85H2nLxeCPWTJT_HeaE6h3DU0udQ-tERA09OhS_iJmHIrWqe4bY4aG9sKQDF8&usqp=CAU" />
           {/*Button Trigger*/}
           <IonGrid>
             <IonButton color="warning" expand="full" onClick={handleOpenAlert}>
