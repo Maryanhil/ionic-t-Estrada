@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'ion-t-Estrada/',
+  base: 'ionic-t-Estrada/',
   plugins: [  
     react(),
     legacy()
