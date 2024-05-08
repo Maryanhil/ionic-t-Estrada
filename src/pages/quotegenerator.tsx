@@ -9,7 +9,9 @@ import {
   IonToolbar,
   IonAlert,
   IonRouterLink,
-  IonIcon
+  IonIcon,
+  IonBackButton,
+  IonButtons
 } from '@ionic/react';
 import { logoFacebook, arrowBackCircle, logoTwitter, logoInstagram} from 'ionicons/icons';
 import { collection, getDocs } from 'firebase/firestore'; // Import Firestore functions
@@ -61,6 +63,9 @@ const QuoteGenerator: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
+        <IonButtons slot='start'>
+              <IonBackButton defaultHref='/app/home'/>
+           </IonButtons>
         <IonToolbar>
           <IonTitle>Quote Generator</IonTitle>
         </IonToolbar>

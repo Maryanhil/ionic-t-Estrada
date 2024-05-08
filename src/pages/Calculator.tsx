@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonAvatar, IonItem, IonLabel, IonIcon } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonAvatar, IonItem, IonLabel, IonIcon, IonBackButton, IonButtons } from '@ionic/react';
 import { logoFacebook, logoTwitter, logoInstagram } from 'ionicons/icons';
 import './Calculator.css';
 
@@ -26,6 +26,9 @@ const Tab3: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
+          <IonButtons slot='start'>
+            <IonBackButton defaultHref= '/app/home'/>
+          </IonButtons>
         <IonToolbar>
           <IonTitle>Calculator</IonTitle>
         </IonToolbar>
