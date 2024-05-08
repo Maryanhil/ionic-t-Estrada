@@ -26,10 +26,10 @@ const Tab3: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
           <IonButtons slot='start'>
             <IonBackButton defaultHref= '/app/home'/>
           </IonButtons>
+        <IonToolbar>
           <IonTitle>Calculator</IonTitle>
         </IonToolbar>
       </IonHeader>
